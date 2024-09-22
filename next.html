@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> I Love You Isha ❤️ </title>
+        <link rel="stylesheet" href="styles1.css">
+    </head>
+<body>
+    <center> 
+        <video autoplay muted loop>
+            <source src="bg2.mp4" type="video/mp4">
+        </video>
+        <audio id="backgroundMusic" autoplay loop style="display:none;">
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </center>
+    <div class="typewriter">
+        <span class="larger-font">I Love You Isha</span><br>
+        You are my sunshine and moonlight and i will never stop loving you 
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards-container" id="cards">
+        <!-- First Card: Grateful -->
+        <div class="card">
+            <h2>Grateful</h2>
+            <img src="1.jpg" alt="Grateful Image">
+           <h3>
+            To my dearest Isha, your smile brightens my day and your laughter fills my heart with joy. I'm grateful to have you by my side, and I love you more with each passing moment.</h3>
+        </div>
+
+        <!-- Second Card: My Happiness -->
+        <div class="card">
+            <h2>My Happiness</h2>
+            <img src="2.jpg" alt="Happiness Image">
+            <h3> 
+                Isha, you are the reason for my happiness. Your love is like a gentle breeze that sweeps me off my feet. I cherish every second we spend together, and I'm forever yours only.</h3>
+        </div>
+    </div>
+
+    <script>
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        backgroundMusic.volume = 0.5; // Set volume (0.0 to 1.0)
+        // Function to show the cards after a 3-second delay
+        window.onload = function() {
+            setTimeout(function() {
+                var cards = document.getElementById('cards');
+                cards.style.opacity = '1'; // Make the cards visible
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+    </script>
+</body>
+</html>

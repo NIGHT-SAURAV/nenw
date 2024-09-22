@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title> I Love You Isha ❤️ </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <center> 
+            <video autoplay muted loop>
+                <source src="bg.mp4" type="video/mp4">
+            </video>
+        </center>
+        
+        <div class="hi-container" id="hiContainer">
+            Hi Isha
+        </div>
+
+        <div class="question-container" id="questionContainer">
+            <p>How was your day?</p>
+            <div class="options">
+                <button id="goodButton">Good</button>
+                <button id="badButton">Bad</button>
+            </div>
+        </div>
+
+        <div class="response-container" id="responseContainer"></div>
+
+        <script>
+            // Show the "Hi Isha" container after 2 seconds with the animation from below
+            setTimeout(() => {
+                const hiContainer = document.getElementById("hiContainer");
+                hiContainer.style.display = "block";
+                hiContainer.style.opacity = "1";
+                hiContainer.style.transform = "translate(-50%, -10%)"; // Moves the container into view
+            }, 2000);
+        
+            // Show the question container after "Hi Isha" appears (at 4 seconds)
+            setTimeout(() => {
+                const questionContainer = document.getElementById("questionContainer");
+                questionContainer.style.display = "block";
+                questionContainer.style.opacity = "1";
+                questionContainer.style.transform = "translate(-50%, -50%)"; // Moves the container into view
+            }, 4000);
+        
+            // Handle button clicks to show responses
+            document.getElementById("goodButton").onclick = function() {
+                displayResponse("Let's make it more better");
+            };
+            document.getElementById("badButton").onclick = function() {
+                displayResponse("Awwww 🥹 don't worry, I'm here for you, let's make it better");
+            };
+        
+            // Function to display the response and OK button in the response container
+            function displayResponse(message) {
+                const responseContainer = document.getElementById("responseContainer");
+                responseContainer.innerHTML = `<p>${message}</p>
+                                               <button class="ok-button" id="okButton">OK</button>`;
+                responseContainer.style.display = "block";
+                responseContainer.style.opacity = "1";
+                responseContainer.style.transform = "translate(-50%, -50%)"; // Moves the container into view
+        
+                // Add event listener for OK button click
+                document.getElementById("okButton").onclick = function() {
+                    window.location.href = "next.html";
+                };
+            }
+        </script>
+    </body>
+</html>
